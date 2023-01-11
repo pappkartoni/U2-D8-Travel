@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <style>
+        .jumbotron {
+            background-image: url("https://r4.wallpaperflare.com/wallpaper/440/782/438/fire-iceland-eyjafjallajokull-2010-wallpaper-19b0c80d910afd2b464798cf00a1e6ed.jpg");
+            -webkit-background-size: 100% 100%;
+            -moz-background-size: 100% 100%;
+            -o-background-size: 100% 100%;
+            background-size: 100% 100%;
+            min-height: 360px;
+            background-size: cover;
+            background-position: center;
+        }
+        .card-img-top {
+            width: 100%;
+            object-fit: cover;
+        }
+        #weekly .card-img-top {
+            height: 200px;
+        }
+        #summer .card-img-top {
+            height: 120px;
+        }
+        td {
+            max-width: 100%;
+        }
+        h1 {
+            word-wrap:break-word;
+        }
+        .portrait-wrapper {
+            display: flex;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+
+        }
+        #testimonial .card {
+            border-radius: 75px;
+            height: 150px;
+        }
+        #testimonial .card p {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+        }
+        p.text {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 7;
+            overflow: hidden;
+        }
+        @media (max-width: 1199px) {
+            p.text {
+                -webkit-line-clamp: 4;
+            }
+        }
+        @media (max-width: 990px) {
+            .additional-info {
+                display: none;
+            }
+        }
+    </style>
+    <title>D8 Travel Agency</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top border-bottom">
+        <a class="navbar-brand" href="#">
+            <img src="nav-logo.png" width="30px">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                    <a class="nav-link" href="#weekly">Deals of the Week</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#summer">Welcome Summer</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#daily">Deal of the Day</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#lastminute">Last Minute</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#testimonial">Testimonial</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li>
+                    <button class="btn btn-primary mr-2" onclick="hideAllCards()">Hide Cards</button>
+                </li>
+                <li>
+                    <button class="btn btn-warning mr-2" onclick="makeHot()">Hot Dealz</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="jumbotron py-5 text-white" id="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="display-1">Pappkartouri</h1>
+                    <p class="lead">Catch a throatful from the fire vocal, with ash and molten glass like Eyjafjallajökull</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container py-5" id="weekly">
+        <div class="mb-3 d-flex align-items-center">
+            <h2 class="mr-auto">Deals of the Week</h2>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#weekly-row" aria-expanded="false" aria-controls="weekly-row">
+                        Toggle
+            </button>
+        </div>
+        <div class="row show" id="weekly-row">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card">
+                    <img src="https://r4.wallpaperflare.com/wallpaper/440/782/438/fire-iceland-eyjafjallajokull-2010-wallpaper-19b0c80d910afd2b464798cf00a1e6ed.jpg" class="card-img-top" alt="eyja" data-toggle="collapse" data-target="#details1" aria-expanded="false" aria-controls="details1">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-truncate">Eyjafjallajökull</h5>
+                        <h6 class="card-subtitle text-secondary mb-3">Iceland</h6>
+                        <p class="fs-3 text-muted collapse" id="details1">Catch a throatful from the fire vocal, with ash and molten glass like Eyjafjallajökull.</p>
+                        <p class="card-subtitle text-muted">Duration: 14 days</p>
+                        <p class="card-subtitle text-muted">Price: 1469€</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card">
+                    <img src="https://m.media-amazon.com/images/I/716ZuJ-sejL._SL1200_.jpg" class="card-img-top" alt="eyja" data-toggle="collapse" data-target="#details2" aria-expanded="false" aria-controls="details2">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-truncate">Eyjafjallajökull</h5>
+                        <h6 class="card-subtitle text-secondary mb-3">Iceland</h6>
+                        <p class="fs-3 text-muted collapse" id="details2">Catch a throatful from the fire vocal, with ash and molten glass like Eyjafjallajökull.</p>
+                        <p class="card-subtitle text-muted">Duration: 14 days</p>
+                        <p class="card-subtitle text-muted">Price: 1469€</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card">
+                    <img src="https://r4.wallpaperflare.com/wallpaper/440/782/438/fire-iceland-eyjafjallajokull-2010-wallpaper-19b0c80d910afd2b464798cf00a1e6ed.jpg" class="card-img-top" alt="eyja" data-toggle="collapse" data-target="#details3" aria-expanded="false" aria-controls="details3">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-truncate">Eyjafjallajökull</h5>
+                        <h6 class="card-subtitle text-secondary mb-3">Iceland</h6>
+                        <p class="fs-3 text-muted collapse" id="details3">Catch a throatful from the fire vocal, with ash and molten glass like Eyjafjallajökull.</p>
+                        <p class="card-subtitle text-muted">Duration: 14 days</p>
+                        <p class="card-subtitle text-muted">Price: 1469€</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card">
+                    <img src="https://r4.wallpaperflare.com/wallpaper/440/782/438/fire-iceland-eyjafjallajokull-2010-wallpaper-19b0c80d910afd2b464798cf00a1e6ed.jpg" class="card-img-top" alt="eyja" data-toggle="collapse" data-target="#details4" aria-expanded="false" aria-controls="details4">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-truncate">Eyjafjallajökull</h5>
+                        <h6 class="card-subtitle text-secondary mb-3">Iceland</h6>
+                        <p class="fs-3 text-muted collapse" id="details4">Catch a throatful from the fire vocal, with ash and molten glass like Eyjafjallajökull.</p>
+                        <p class="card-subtitle text-muted">Duration: 14 days</p>
+                        <p class="card-subtitle text-muted">Price: 1469€</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container py-5 shadow-lg" id="summer">
+        <div class="mb-3 d-flex align-items-center">
+            <h2 class="mr-auto">Welcome Summer</h2>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#summer-row" aria-expanded="false" aria-controls="summer-row">
+                        Toggle
+            </button>
+        </div>
+        <div class="row show" id="summer-row">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                <div class="card">
+                    <img src="https://r4.wallpaperflare.com/wallpaper/440/782/438/fire-iceland-eyjafjallajokull-2010-wallpaper-19b0c80d910afd2b464798cf00a1e6ed.jpg" class="card-img-top" alt="eyja" data-toggle="collapse" data-target="#details5" aria-expanded="false" aria-controls="details5">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-truncate">Eyjafjallajökull</h5>
+                        <h6 class="card-subtitle text-secondary mb-3">Iceland</h6>
+                        <p class="fs-3 text-muted collapse" id="details5">Catch a throatful from the fire vocal, with ash and molten glass like Eyjafjallajökull.</p>
+                        <p class="card-subtitle text-muted">Duration: 14 days</p>
+                        <p class="card-subtitle text-muted">Price: 1469€</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                <div class="card">
+                    <img src="https://m.media-amazon.com/images/I/716ZuJ-sejL._SL1200_.jpg" class="card-img-top" alt="eyja" data-toggle="collapse" data-target="#details6" aria-expanded="false" aria-controls="details6">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-truncate">Eyjafjallajökull</h5>
+                        <h6 class="card-subtitle text-secondary mb-3">Iceland</h6>
+                        <p class="fs-3 text-muted collapse" id="details6">Catch a throatful from the fire vocal, with ash and molten glass like Eyjafjallajökull.</p>
+                        <p class="card-subtitle text-muted">Duration: 14 days</p>
+                        <p class="card-subtitle text-muted">Price: 1469€</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                <div class="card">
+                    <img src="https://r4.wallpaperflare.com/wallpaper/440/782/438/fire-iceland-eyjafjallajokull-2010-wallpaper-19b0c80d910afd2b464798cf00a1e6ed.jpg" class="card-img-top" alt="eyja" data-toggle="collapse" data-target="#details7" aria-expanded="false" aria-controls="details7">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-truncate">Eyjafjallajökull</h5>
+                        <h6 class="card-subtitle text-secondary mb-3">Iceland</h6>
+                        <p class="fs-3 text-muted collapse" id="details7">Catch a throatful from the fire vocal, with ash and molten glass like Eyjafjallajökull.</p>
+                        <p class="card-subtitle text-muted">Duration: 14 days</p>
+                        <p class="card-subtitle text-muted">Price: 1469€</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                <div class="card">
+                    <img src="https://r4.wallpaperflare.com/wallpaper/440/782/438/fire-iceland-eyjafjallajokull-2010-wallpaper-19b0c80d910afd2b464798cf00a1e6ed.jpg" class="card-img-top" alt="eyja" data-toggle="collapse" data-target="#details8" aria-expanded="false" aria-controls="details8">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-truncate">Eyjafjallajökull</h5>
+                        <h6 class="card-subtitle text-secondary mb-3">Iceland</h6>
+                        <p class="fs-3 text-muted collapse" id="details8">Catch a throatful from the fire vocal, with ash and molten glass like Eyjafjallajökull.</p>
+                        <p class="card-subtitle text-muted">Duration: 14 days</p>
+                        <p class="card-subtitle text-muted">Price: 1469€</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                <div class="card">
+                    <img src="https://r4.wallpaperflare.com/wallpaper/440/782/438/fire-iceland-eyjafjallajokull-2010-wallpaper-19b0c80d910afd2b464798cf00a1e6ed.jpg" class="card-img-top" alt="eyja" data-toggle="collapse" data-target="#details9" aria-expanded="false" aria-controls="details9">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-truncate">Eyjafjallajökull</h5>
+                        <h6 class="card-subtitle text-secondary mb-3">Iceland</h6>
+                        <p class="fs-3 text-muted collapse" id="details9">Catch a throatful from the fire vocal, with ash and molten glass like Eyjafjallajökull.</p>
+                        <p class="card-subtitle text-muted">Duration: 14 days</p>
+                        <p class="card-subtitle text-muted">Price: 1469€</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                <div class="card">
+                    <img src="https://r4.wallpaperflare.com/wallpaper/440/782/438/fire-iceland-eyjafjallajokull-2010-wallpaper-19b0c80d910afd2b464798cf00a1e6ed.jpg" class="card-img-top" alt="eyja" data-toggle="collapse" data-target="#details10" aria-expanded="false" aria-controls="details10">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-truncate">Eyjafjallajökull</h5>
+                        <h6 class="card-subtitle text-secondary mb-3">Iceland</h6>
+                        <p class="fs-3 text-muted collapse" id="details10">Catch a throatful from the fire vocal, with ash and molten glass like Eyjafjallajökull.</p>
+                        <p class="card-subtitle text-muted">Duration: 14 days</p>
+                        <p class="card-subtitle text-muted">Price: 1469€</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container d-none d-md-block py-5" id="daily">
+        <div class="mb-3 d-flex align-items-center">
+            <h2 class="mr-auto">Deal of the Day</h2>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#daily-row" aria-expanded="false" aria-controls="daily-row">
+                        Toggle
+            </button>
+        </div>
+        <div class="row show" id="daily-row">
+            <div class="col-12 col-md-8">
+                <img src="https://images.unsplash.com/photo-1568475240089-ee4fcbbd7f31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" class="img-fluid" alt="mm...food">
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="row d-flex flex-column">
+                    <h3>Brooklyn, New York</h3>
+                    <p class="subtitle text-muted">United States of America</p>
+                    <h5>Trip Details</h5>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <th scope="row">Start</th>
+                                <td>25.01.2023</td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row">End</th>
+                                <td>03.02.2023</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Price incl. taxes</th>
+                                <td>1000€</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="additional-info">
+                        <h5>Additional Information</h5>
+                        <p class="text">Located in Brooklyn, TownePlace Suites by Marriott New York Brooklyn is near a train station. One World Trade Center and Brooklyn Bridge are notable landmarks, and the area's natural beauty can be seen at Prospect Park and Brooklyn Botanic Gardens. 
+                                    Check out an event or a game at Barclays Center Brooklyn...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-5" id="lastminute">
+        <div class="mb-3 d-flex align-items-center">
+            <h2 class="mr-auto">Last Minute</h2>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#lastmin-row" aria-expanded="false" aria-controls="lastmin-row">
+                        Toggle
+            </button>
+        </div>
+        <div class="row show mb-5 gy-3" id="lastmin-row">
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card border-0 pb-4">
+                    <img class="card-img-top img-fluid" src="https://images.unsplash.com/photo-1568475240089-ee4fcbbd7f31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="eyja">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card border-0 pb-4">
+                    <img class="card-img-top img-fluid" src="https://images.unsplash.com/photo-1568475240089-ee4fcbbd7f31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="eyja">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card border-0 pb-4">
+                    <img class="card-img-top img-fluid" src="https://images.unsplash.com/photo-1568475240089-ee4fcbbd7f31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="eyja">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card border-0 pb-4">
+                    <img class="card-img-top img-fluid" src="https://images.unsplash.com/photo-1568475240089-ee4fcbbd7f31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="eyja">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card border-0 pb-4">
+                    <img class="card-img-top img-fluid" src="https://images.unsplash.com/photo-1568475240089-ee4fcbbd7f31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="eyja">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card border-0 pb-4">
+                    <img class="card-img-top img-fluid" src="https://images.unsplash.com/photo-1568475240089-ee4fcbbd7f31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="eyja">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card border-0 pb-4">
+                    <img class="card-img-top img-fluid" src="https://images.unsplash.com/photo-1568475240089-ee4fcbbd7f31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="eyja">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card border-0 pb-4">
+                    <img class="card-img-top img-fluid" src="https://images.unsplash.com/photo-1568475240089-ee4fcbbd7f31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="eyja">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container py-5 d-none d-lg-block" id="testimonial">
+        <div class="mb-3 d-flex align-items-center">
+            <h2 class="mr-auto">Testimonials</h2>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#testimonial-row" aria-expanded="false" aria-controls="testimonial-row">
+                        Toggle
+            </button>
+        </div>
+        <div class="row show mb-5 gy-3" id="testimonial-row">
+            <div class="col-12">
+                <div class="carousel slide" id="testimonial-carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="card mb-1">
+                                    <div class="row no-gutters">
+                                        <div class="col-md-4">
+                                            <div class="portrait-wrapper">
+                                                <img src="portrait.jpg" class="card-img" alt="happy customer">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Wow, simply amazing!</h5>
+                                                <p class="card-text">This homepage looks so good, and is totally not based on yesterday's homework!</p>
+                                                <p class="card-text"><small class="text-muted">Flo - Written 3 mins ago</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="card mb-1">
+                                    <div class="row no-gutters">
+                                        <div class="col-md-4">
+                                            <div class="portrait-wrapper">
+                                                <img src="portrait.jpg" class="card-img" alt="happy customer">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Wow, simply amazing!</h5>
+                                                <p class="card-text">This homepage looks so good, and is totally not based on yesterday's homework!</p>
+                                                <p class="card-text"><small class="text-muted">Flo - Written 3 mins ago</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="card mb-1">
+                                        <div class="row no-gutters">
+                                            <div class="col-md-4">
+                                                <div class="portrait-wrapper">
+                                                    <img src="portrait.jpg" class="card-img" alt="happy customer">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Wow, simply amazing!</h5>
+                                                    <p class="card-text">This homepage looks so good, and is totally not based on yesterday's homework!</p>
+                                                    <p class="card-text"><small class="text-muted">Flo - Written 3 mins ago</small></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="card mb-1">
+                                        <div class="row no-gutters">
+                                            <div class="col-md-4">
+                                                <div class="portrait-wrapper">
+                                                    <img src="portrait.jpg" class="card-img" alt="happy customer">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Wow, simply amazing!</h5>
+                                                    <p class="card-text">This homepage looks so good, and is totally not based on yesterday's homework!</p>
+                                                    <p class="card-text"><small class="text-muted">Flo - Written 3 mins ago</small></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="card mb-1">
+                                        <div class="row no-gutters">
+                                            <div class="col-md-4">
+                                                <div class="portrait-wrapper">
+                                                    <img src="portrait.jpg" class="card-img" alt="happy customer">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Wow, simply amazing!</h5>
+                                                    <p class="card-text">This homepage looks so good, and is totally not based on yesterday's homework!</p>
+                                                    <p class="card-text"><small class="text-muted">Flo - Written 3 mins ago</small></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="card mb-1">
+                                        <div class="row no-gutters">
+                                            <div class="col-md-4">
+                                                <div class="portrait-wrapper">
+                                                    <img src="portrait.jpg" class="card-img" alt="happy customer">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Wow, simply amazing!</h5>
+                                                    <p class="card-text">This homepage looks so good, and is totally not based on yesterday's homework!</p>
+                                                    <p class="card-text"><small class="text-muted">Flo - Written 3 mins ago</small></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                          </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer bg-light border-top">
+        <div class="container">
+            <div class="row">
+                <ul class="nav navbar-light justify-content-center mt-3 text-center col-12">
+                    <li class="nav-item active">
+                        <a class="nav-link text-muted" href="#">Back to Top</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-muted" href="" data-toggle="modal" data-target="#contactModal">Contact us</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-muted" href="#">Copyright</a>
+                    </li>
+                </ul>
+            </div>
+            <hr class="py-2">
+            <div class="row text-muted">
+                <div class="col-md-12 text-center">
+                    <h4>Pappkartouri Tours GmbH</h4>
+                    <p>Fake Street 1</p>
+                    <p>22765 Hamburg</p>
+                    <p>Germany</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="contactModalLabel">Contact us</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <p>Feel free to leave some additional Feedback!</p>
+                <form>
+                    <div class="form-group">
+                        <label for="contactemail">Email address</label>
+                        <input type="email" class="form-control" id="contactemail" placeholder="name@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="contacttext">Whaddup</label>
+                        <textarea class="form-control" id="contacttext" rows="3"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        const hideAllCards = function() {
+            let cards = document.getElementsByClassName("card");
+            for (let c of cards) {
+                c.style.display = "none";
+            }
+        }
+        const makeHot = function() {
+            let cards = document.querySelectorAll("#summer .card .card-body");
+            for (let c of cards) {
+                c.innerHTML += '<span class="badge badge-warning" style="max-width: 33%">HOT</span>'
+            }
+        }
+    </script>
+</body>
+</html>
